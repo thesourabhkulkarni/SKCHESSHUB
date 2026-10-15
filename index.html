@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SKCHESSHUB – Your Complete Chess Partner for Growth &amp; Excellence</title>
+<meta name="description" content="SKCHESSHUB – chess coaching, tournaments, software, AI chess and daily practice. Play Stockfish-powered AI or challenge a friend online.">
+<meta name="theme-color" content="#ec3f0f">
+<meta property="og:title" content="SKCHESSHUB – Empowering Minds with the Chess">
+<meta property="og:description" content="Learn, play, compete and grow. Play with AI (Stockfish), multiplayer, puzzles and more.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- ============ SVG SPRITE ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gCrown" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff6a2b"/><stop offset="1" stop-color="#c0240a"/></linearGradient>
+    <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6b3f07"/><stop offset=".18" stop-color="#c98b22"/><stop offset=".38" stop-color="#f7d27a"/>
+      <stop offset=".5" stop-color="#fff3c4"/><stop offset=".66" stop-color="#e3a937"/><stop offset=".85" stop-color="#9a5f10"/><stop offset="1" stop-color="#5a3306"/>
+    </linearGradient>
+  </defs>
+
+  <symbol id="logo" viewBox="0 0 100 100">
+    <circle cx="50" cy="7" r="5" fill="url(#gCrown)"/>
+    <rect x="49" y="13" width="2" height="11" fill="url(#gCrown)"/>
+    <path d="M9 80C0 55 5 33 23 30c8 14 10 33 8 50z" fill="url(#gCrown)"/>
+    <path d="M91 80c9-25 4-47-14-50-8 14-10 33-8 50z" fill="url(#gCrown)"/>
+    <path d="M33 80C26 52 30 24 48 21v59z" fill="url(#gCrown)"/>
+    <path d="M67 80c7-28 3-56-15-59v59z" fill="url(#gCrown)"/>
+    <circle cx="50" cy="46" r="3.4" fill="#fff"/>
+    <path d="M45.5 80Q47 62 50 55q3 7 4.5 25z" fill="#fff"/>
+    <rect x="15" y="83" width="70" height="5" rx="2.5" fill="url(#gCrown)"/>
+    <rect x="19" y="91" width="62" height="2" rx="1" fill="url(#gCrown)" opacity=".8"/>
+  </symbol>
+
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-board" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M9 10h.01M15 10h.01"/></symbol>
+  <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+  <symbol id="i-robot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8V5M9 13v2M15 13v2M2 13v3M22 13v3"/><circle cx="12" cy="4" r="1"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="i-caret" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></symbol>
+  <symbol id="i-first" viewBox="0 0 24 24"><path d="M19 20 9 12l10-8zM5 19V5"/></symbol>
+  <symbol id="i-prev" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-next" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-last" viewBox="0 0 24 24"><path d="m5 4 10 8-10 8zM19 5v14"/></symbol>
+  <symbol id="i-flip" viewBox="0 0 24 24"><path d="M7 16V4M3 8l4-4 4 4M17 8v12M21 16l-4 4-4-4"/></symbol>
+  <symbol id="i-reset" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 22V4M4 4h14l-3 5 3 5H4"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8"/></symbol>
+  <symbol id="s-youtube" viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5 3z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="s-facebook" viewBox="0 0 24 24"><path d="M15 3h-2a4 4 0 0 0-4 4v3H6v4h3v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h2z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="s-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
+  <symbol id="s-linkedin" viewBox="0 0 24 24"><path d="M4 9h4v11H4zM6 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM10 9h4v1.6c.6-1 1.8-1.9 3.6-1.9 3 0 3.4 2 3.4 4.5V20h-4v-5.6c0-1.3 0-2.4-1.5-2.4S14 13 14 14.3V20h-4z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="s-x" viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.8L22 21h-6.2l-4.9-6.3L5.3 21H2.2l7.3-8.3L2 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z" fill="currentColor" stroke="none"/></symbol>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="top">
+  <div class="hdr-inner">
+    <a class="brand" href="#home" aria-label="SKCHESSHUB home">
+      <img class="logo-mark" src="assets/logo-mark.png" alt="" width="68" height="68">
+      <span class="brand-text"><b><i>SK</i>CHESSHUB</b><small>EMPOWERING MINDS WITH THE CHESS</small></span>
+    </a>
+
+    <div class="hdr-mid">
+      <form class="search" id="searchForm" role="search">
+        <svg class="i"><use href="#i-search"/></svg>
+        <input id="searchInput" type="search" placeholder="Search for coaching, tournaments, ebooks, etc..." aria-label="Search">
+      </form>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a class="nav-link active" href="#home">Home</a>
+        <div class="dd"><button class="nav-link dd-btn" aria-expanded="false">Coaching <svg class="i caret"><use href="#i-caret"/></svg></button>
+          <div class="dd-menu"><a href="#services">Online Coaching</a><a href="#services">Offline Coaching</a><a href="#services">Group Classes</a><a href="#contact">Book a Free Demo</a></div></div>
+        <div class="dd"><button class="nav-link dd-btn" aria-expanded="false">Tournaments <svg class="i caret"><use href="#i-caret"/></svg></button>
+          <div class="dd-menu"><a href="#services">Upcoming Events</a><a href="#services">Results</a><a href="#contact">Register</a></div></div>
+        <div class="dd"><button class="nav-link dd-btn" aria-expanded="false">Chess Sets <svg class="i caret"><use href="#i-caret"/></svg></button>
+          <div class="dd-menu"><a href="#services">Wooden Sets</a><a href="#services">Tournament Sets</a><a href="#services">Travel Sets</a></div></div>
+        <div class="dd"><button class="nav-link dd-btn" aria-expanded="false">Ebooks <svg class="i caret"><use href="#i-caret"/></svg></button>
+          <div class="dd-menu"><a href="#services">Openings</a><a href="#services">Tactics</a><a href="#services">Endgames</a></div></div>
+        <div class="dd"><button class="nav-link dd-btn" aria-expanded="false">Chess Software <svg class="i caret"><use href="#i-caret"/></svg></button>
+          <div class="dd-menu"><a href="#services">Training Tools</a><a href="#services">Analysis Boards</a><a href="#services">Chess Engines</a></div></div>
+        <div class="dd"><button class="nav-link dd-btn" aria-expanded="false">Practice <svg class="i caret"><use href="#i-caret"/></svg></button>
+          <div class="dd-menu"><a href="#" data-action="puzzle">Solve Positions</a><a href="#" data-action="puzzle">Daily Puzzles</a><a href="#services">Drills</a></div></div>
+        <div class="dd"><button class="nav-link dd-btn" aria-expanded="false">AI Chess <svg class="i caret"><use href="#i-caret"/></svg></button>
+          <div class="dd-menu"><a href="#" data-action="play-ai">Play with AI</a><a href="#" data-action="play-online">Play a Friend</a></div></div>
+        <a class="nav-link" href="#" data-action="coaches">Coaches Portal</a>
+        <div class="auth-m">
+          <button class="btn ghost sm" data-open="authModal">Login</button>
+          <button class="btn primary sm" data-open="authModal">Sign Up</button>
+        </div>
+      </nav>
+    </div>
+
+    <div class="auth">
+      <button class="btn ghost sm" data-open="authModal"><svg class="i"><use href="#i-user"/></svg>Login</button>
+      <button class="btn primary sm" data-open="authModal">Sign Up</button>
+    </div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg class="i"><use href="#i-menu"/></svg></button>
+  </div>
+</header>
+<div class="scrim" id="scrim"></div>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <canvas id="dust" aria-hidden="true"></canvas>
+  <div class="hero-bg" aria-hidden="true">
+    <div class="floor"></div>
+    <img class="bgp p1" src="https://cdn.jsdelivr.net/gh/lichess-org/lila@master/public/piece/cburnett/wR.svg" alt="">
+    <img class="bgp p2" src="https://cdn.jsdelivr.net/gh/lichess-org/lila@master/public/piece/cburnett/wB.svg" alt="">
+    <img class="bgp p3" src="https://cdn.jsdelivr.net/gh/lichess-org/lila@master/public/piece/cburnett/bB.svg" alt="">
+    <img class="bgp p4" src="https://cdn.jsdelivr.net/gh/lichess-org/lila@master/public/piece/cburnett/wQ.svg" alt="">
+    <img class="bgp p5" src="https://cdn.jsdelivr.net/gh/lichess-org/lila@master/public/piece/cburnett/bP.svg" alt="">
+    <img class="bgp p6" src="https://cdn.jsdelivr.net/gh/lichess-org/lila@master/public/piece/cburnett/wP.svg" alt="">
+  </div>
+
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="pill rv">Empowering Minds Through Chess</span>
+      <h1 class="rv">
+        <span class="l1">YOUR COMPLETE</span>
+        <span class="l2"><em>CHESS</em> PARTNER</span>
+        <span class="l3">FOR GROWTH &amp; EXCELLENCE</span>
+      </h1>
+      <p class="lead rv">At <b>SKCHESSHUB</b>, we are committed to empowering players, coaches, and businesses through innovative chess solutions, technology, and expert guidance.</p>
+
+      <ul class="audience rv">
+        <li><span class="ico-c"><svg class="i"><use href="#i-users"/></svg></span><div><b>FOR PLAYERS</b><span>Learn, Train,<br>Improve</span></div></li>
+        <li><span class="ico-c"><svg class="i"><use href="#i-board"/></svg></span><div><b>FOR COACHES</b><span>Teach, Manage,<br>Grow</span></div></li>
+        <li><span class="ico-c"><svg class="i"><use href="#i-building"/></svg></span><div><b>FOR BUSINESSES</b><span>Promote, Engage,<br>Succeed</span></div></li>
+      </ul>
+
+      <div class="cta rv">
+        <button class="btn primary lg" data-action="play-ai"><span class="play-dot"><svg class="i fill"><use href="#i-play"/></svg></span>Play with AI <svg class="i"><use href="#i-arrow"/></svg></button>
+        <button class="btn outline lg" data-action="puzzle"><svg class="i"><use href="#i-pencil"/></svg>Solve Positions</button>
+      </div>
+    </div>
+
+    <div class="hero-king" id="king" aria-hidden="true">
+      <div class="halo"></div><div class="halo h2"></div>
+      <img class="king-img" src="assets/king.png" alt="" width="433" height="407">
+    </div>
+
+    <!-- ============ GAME CARD ============ -->
+    <div class="game-card" id="play">
+      <div class="gc-head">
+        <img class="logo-sm" src="assets/logo-mark.png" alt="" width="26" height="26">
+        <h2 id="gcTitle">Play Chess Online</h2>
+        <span class="live" id="liveBadge"><i></i><span id="liveText">Live</span></span>
+        <div class="gear-wrap">
+          <button class="icon-btn" id="btnSettings" aria-label="Settings" aria-haspopup="true"><svg class="i"><use href="#i-gear"/></svg></button>
+          <div class="pop" id="settingsPop" hidden>
+            <button data-set="flip"><svg class="i"><use href="#i-flip"/></svg>Flip board</button>
+            <button data-set="reset"><svg class="i"><use href="#i-reset"/></svg>Reset board</button>
+            <button data-set="resign"><svg class="i"><use href="#i-flag"/></svg>Resign</button>
+            <label><input type="checkbox" id="optSound" checked> Sound</label>
+            <label><input type="checkbox" id="optLegal" checked> Show legal moves</label>
+            <div class="themes"><span>Board</span>
+              <button data-theme="green" class="t-green on" aria-label="Green"></button>
+              <button data-theme="brown" class="t-brown" aria-label="Brown"></button>
+              <button data-theme="blue" class="t-blue" aria-label="Blue"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gc-grid">
+        <div class="board-wrap">
+          <div id="board" class="board" data-theme="green" aria-label="Chess board"></div>
+          <div class="promo" id="promo" hidden></div>
+          <div class="result" id="result" hidden>
+            <div class="res-box">
+              <h3 id="resTitle">Game over</h3>
+              <p id="resSub"></p>
+              <div class="res-btns"><button class="btn primary sm" id="resNew">New Game</button><button class="btn ghost sm" id="resClose">View board</button></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="side">
+          <div class="player top" id="pTop">
+            <span class="av" id="avTop"><svg class="i"><use href="#i-robot"/></svg></span>
+            <div class="pinfo"><b id="nameTop">Computer (AI)</b><small id="eloTop">ELO 1600</small></div>
+            <span class="clock" id="clockTop">10:00</span>
+          </div>
+
+          <div class="moves">
+            <div class="mv-list" id="movesList"></div>
+            <div class="status" id="status">Loading…</div>
+          </div>
+
+          <div class="player bot" id="pBot">
+            <span class="av you" id="avBot"><svg class="i"><use href="#i-user"/></svg></span>
+            <div class="pinfo"><b id="nameBot">You</b><small id="eloBot">ELO 1200</small></div>
+            <span class="clock" id="clockBot">10:00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gc-controls">
+        <button class="icon-btn" id="btnFirst" aria-label="First move"><svg class="i"><use href="#i-first"/></svg></button>
+        <button class="icon-btn" id="btnPrev" aria-label="Previous move"><svg class="i"><use href="#i-prev"/></svg></button>
+        <button class="icon-btn" id="btnNext" aria-label="Next move"><svg class="i"><use href="#i-next"/></svg></button>
+        <button class="icon-btn" id="btnLast" aria-label="Last move"><svg class="i"><use href="#i-last"/></svg></button>
+        <button class="btn soft sm" id="btnNew">New Game</button>
+        <button class="btn soft sm" id="btnReset"><svg class="i"><use href="#i-reset"/></svg>Reset Board</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="wrap svc-grid">
+    <div class="svc-intro rv">
+      <span class="eyebrow"><i></i>OUR SERVICES</span>
+      <h2>Comprehensive Chess Solutions</h2>
+      <p>From learning to competing, we provide everything you need to excel in chess. Choose your path and start your journey today!</p>
+      <a class="btn outline sm" href="#services">Explore All Services <svg class="i"><use href="#i-arrow"/></svg></a>
+    </div>
+
+    <article class="svc rv" tabindex="0">
+      <div class="art art-coach"><img src="assets/svc-coach.jpg" alt="" loading="lazy"></div>
+      <span class="tile"><svg class="i"><use href="#i-users"/></svg></span>
+      <h3>Online / Offline<br>Chess Coaching</h3>
+      <p>Expert coaching for all levels from beginner to advanced.</p>
+      <a class="go" href="#contact" aria-label="Coaching"><svg class="i"><use href="#i-arrow"/></svg></a>
+    </article>
+
+    <article class="svc rv" tabindex="0">
+      <div class="art art-tour"><img src="assets/svc-tour.jpg" alt="" loading="lazy"></div>
+      <span class="tile"><svg class="i"><use href="#i-trophy"/></svg></span>
+      <h3>Chess Tournaments</h3>
+      <p>Participate, Compete, Win. Grow.</p>
+      <a class="go" href="#contact" aria-label="Tournaments"><svg class="i"><use href="#i-arrow"/></svg></a>
+    </article>
+
+    <article class="svc rv" tabindex="0">
+      <div class="art art-soft"><img src="assets/svc-soft.jpg" alt="" loading="lazy"></div>
+      <span class="tile"><svg class="i"><use href="#i-monitor"/></svg></span>
+      <h3>Chess Software</h3>
+      <p>Powerful tools for better learning.</p>
+      <a class="go" href="#contact" aria-label="Software"><svg class="i"><use href="#i-arrow"/></svg></a>
+    </article>
+
+    <article class="svc rv" tabindex="0">
+      <div class="art art-ai"><img src="assets/svc-ai.jpg" alt="" loading="lazy"></div>
+      <span class="tile dark"><svg class="i"><use href="#i-robot"/></svg></span>
+      <h3>Chess AI</h3>
+      <p>Practice with AI and get better.</p>
+      <a class="go" href="#" data-action="play-ai" aria-label="Chess AI"><svg class="i"><use href="#i-arrow"/></svg></a>
+    </article>
+
+    <article class="svc rv" tabindex="0">
+      <div class="art art-prac"><img src="assets/svc-prac.jpg" alt="" loading="lazy"></div>
+      <span class="tile"><svg class="i"><use href="#i-target"/></svg></span>
+      <h3>Practice Sessions</h3>
+      <p>Daily drills, puzzles and more.</p>
+      <a class="go" href="#" data-action="puzzle" aria-label="Practice"><svg class="i"><use href="#i-arrow"/></svg></a>
+    </article>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats-band" id="about">
+  <div class="wrap stats-grid">
+    <div class="join rv">
+      <div class="join-pieces" aria-hidden="true"><img src="assets/banner-pieces.png" alt=""></div>
+      <div class="join-txt"><h3>Join 1000+ Chess Enthusiasts</h3><p>Learn <i>•</i> Play <i>•</i> Compete <i>•</i> Grow</p></div>
+    </div>
+
+    <div class="stats rv">
+      <div class="stat"><span class="ico-c"><svg class="i"><use href="#i-users"/></svg></span><div><b><span data-count="1000">1000</span>+</b><small>Happy Learners</small></div></div>
+      <div class="stat"><span class="ico-c"><svg class="i"><use href="#i-trophy"/></svg></span><div><b><span data-count="50">50</span>+</b><small>Tournaments</small></div></div>
+      <div class="stat"><span class="ico-c"><svg class="i"><use href="#i-board"/></svg></span><div><b><span data-count="500">500</span>+</b><small>Ebooks &amp; Resources</small></div></div>
+      <div class="stat"><span class="ico-c"><svg class="i"><use href="#i-monitor"/></svg></span><div><b><span data-count="10">10</span>+</b><small>Chess Tools &amp; Software</small></div></div>
+    </div>
+
+    <blockquote class="quote rv">
+      <span class="qm">“</span>
+      <p>Chess is not just a game,<br>it's a journey of self-improvement.”</p>
+      <cite>– SKCHESSHUB</cite>
+      <img src="https://cdn.jsdelivr.net/gh/lichess-org/lila@master/public/piece/cburnett/wN.svg" alt="" class="q-knight">
+    </blockquote>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div class="ft-bar">
+      <a class="brand light" href="#home"><img class="logo-mark" src="assets/logo-mark.png" alt="" width="68" height="68"><span class="brand-text"><b><i>SK</i>CHESSHUB</b><small>EMPOWERING MINDS WITH THE CHESS</small></span></a>
+      <a class="ft-item" href="https://www.skchesshub.com" target="_blank" rel="noopener"><span class="ico-c o"><svg class="i"><use href="#i-globe"/></svg></span>www.skchesshub.com</a>
+      <a class="ft-item" href="mailto:skchesshub@gmail.com"><span class="ico-c o"><svg class="i"><use href="#i-mail"/></svg></span>skchesshub@gmail.com</a>
+      <a class="ft-item" href="tel:+918263821109"><span class="ico-c o solid"><svg class="i"><use href="#i-phone"/></svg></span>+91 8263821109</a>
+      <div class="ft-social">
+        <div class="tag"><span>Play Better</span><span>Think Deeper</span><span>Be Greater</span></div>
+        <div class="soc">
+          <a href="#" aria-label="YouTube"><svg class="i"><use href="#s-youtube"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg class="i"><use href="#s-facebook"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg class="i"><use href="#s-instagram"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg class="i"><use href="#s-linkedin"/></svg></a>
+          <a href="#" aria-label="X"><svg class="i"><use href="#s-x"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ft-cols">
+      <div><h4>Quick Links</h4><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#play">Play Online</a></div>
+      <div><h4>Services</h4><a href="#services">Chess Coaching</a><a href="#services">Tournaments</a><a href="#services">Chess Software</a><a href="#services">Ebooks</a></div>
+      <div><h4>Play</h4><a href="#" data-action="play-ai">Play with AI</a><a href="#" data-action="play-online">Multiplayer</a><a href="#" data-action="puzzle">Solve Positions</a></div>
+      <div><h4>Contact</h4><a href="mailto:skchesshub@gmail.com">skchesshub@gmail.com</a><a href="tel:+918263821109">+91 8263821109</a><a href="#top">Back to top ↑</a></div>
+    </div>
+    <div class="ft-copy"><span>© <span id="yr">2026</span> SKCHESSHUB. All rights reserved.</span><span><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></span></div>
+  </div>
+</footer>
+
+<!-- ============ MODALS ============ -->
+<div class="modal" id="newGameModal" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="ngTitle">
+    <button class="modal-x" data-close aria-label="Close"><svg class="i"><use href="#i-x"/></svg></button>
+    <h3 id="ngTitle">New Game</h3>
+    <div class="tabs" id="ngTabs">
+      <button data-mode="ai" class="on">Play vs AI</button>
+      <button data-mode="online">Multiplayer</button>
+      <button data-mode="local">Pass &amp; Play</button>
+    </div>
+
+    <div class="field" data-for="ai">
+      <label for="levelSel">AI strength (Stockfish)</label>
+      <select id="levelSel"></select>
+    </div>
+    <div class="field" data-for="ai online local-color">
+      <label>Play as</label>
+      <div class="chips" id="colorChips">
+        <button data-color="w" class="on">♔ White</button><button data-color="b">♚ Black</button><button data-color="r">🎲 Random</button>
+      </div>
+    </div>
+    <div class="field">
+      <label for="timeSel">Time control</label>
+      <select id="timeSel">
+        <option value="10,0" selected>10 min</option><option value="5,0">5 min</option><option value="3,2">3 min + 2 sec</option><option value="15,10">15 min + 10 sec</option><option value="0,0">No clock</option>
+      </select>
+    </div>
+
+    <div class="room" id="roomPanel" hidden>
+      <div class="room-row">
+        <button class="btn primary sm" id="createRoom">Create room</button>
+        <span class="or">or</span>
+        <div class="join-row"><input id="joinInput" maxlength="5" placeholder="ROOM CODE" autocomplete="off" spellcheck="false"><button class="btn soft sm" id="joinBtn">Join</button></div>
+      </div>
+      <div class="room-code" id="roomCodeBox" hidden>
+        <small>Share this code or link with your friend</small>
+        <div class="code-line"><b id="roomCode">-----</b><button class="icon-btn" id="copyLink" aria-label="Copy invite link"><svg class="i"><use href="#i-copy"/></svg></button></div>
+      </div>
+      <p class="room-msg" id="roomMsg">Peer-to-peer game: no account needed. The host plays the chosen colour.</p>
+    </div>
+
+    <button class="btn primary full" id="startBtn">Start Game</button>
+  </div>
+</div>
+
+<div class="modal" id="authModal" hidden>
+  <div class="modal-box small" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <button class="modal-x" data-close aria-label="Close"><svg class="i"><use href="#i-x"/></svg></button>
+    <h3 id="authTitle">Welcome to SKCHESSHUB</h3>
+    <form id="authForm">
+      <div class="field"><label for="aName">Name</label><input id="aName" type="text" placeholder="Your name" required></div>
+      <div class="field"><label for="aMail">Email</label><input id="aMail" type="email" placeholder="you@email.com" required></div>
+      <div class="field"><label for="aPass">Password</label><input id="aPass" type="password" placeholder="••••••••" minlength="6" required></div>
+      <button class="btn primary full" type="submit">Continue</button>
+      <p class="fine">Demo form – connect your own auth backend (e.g. Supabase / Firebase) to make this live.</p>
+    </form>
+  </div>
+</div>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+<script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
